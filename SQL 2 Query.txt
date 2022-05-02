@@ -2,8 +2,8 @@
 2 - SELECT office_address AS indirizzo_uffici, COUNT(*) as numero_professori FROM teachers GROUP BY office_address ORDER BY numero_professori
 3 - SELECT exam_id, COUNT (exam_id) AS Numero_esame, AVG (vote) AS media FROM exam_student GROUP BY exam_id
 4 - SELECT department_id AS numero_dipartimento, COUNT (*) AS corsi_dipartimento FROM degrees GROUP BY department_id
-5 -
-
+5 - SELECT students.name, students.surname, degrees.name FROM degrees JOIN students ON students.degree_id = degrees.id WHERE degrees.name = 'Corso di Laurea in Economia';
+6 - 
 
 
 BONUS
