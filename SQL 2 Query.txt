@@ -9,6 +9,3 @@
 9 - SELECT degrees.name AS Laurea, courses.name AS Nome_corso, courses.description AS Descrizione_corso, teachers.name AS Nome_Insegnante, teachers.surname AS Cognome_Insegnante FROM degrees JOIN courses ON degrees.id = courses.degree_id JOIN course_teacher ON courses.id = course_teacher.course_id JOIN teachers ON course_teacher.teacher_id = teachers.id
 10 - SELECT teachers.name AS Nome_Insegnante, teachers.surname AS Cognome_Insegnante, departments.name AS Nome_dipartimento FROM teachers JOIN course_teacher ON teachers.id = course_teacher.teacher_id JOIN courses ON course_teacher.course_id = courses.id JOIN degrees ON courses.degree_id = degrees.id JOIN departments ON degrees.department_id = departments.id WHERE departments.name = 'Dipartimento di Matematica';
 
-BONUS
-
-11 -
