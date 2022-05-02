@@ -1,15 +1,9 @@
-1 - SELECT * FROM teachers 
-2 - SELECT * FROM departments;
-3 - SELECT * FROM degrees WHERE level='magistrale';
-4 - SELECT * FROM students WHERE name='Marco';
-5 - SELECT * FROM courses WHERE cfu >= 12;
-6 - SELECT * FROM courses WHERE cfu > 12 OR cfu<5;
-7 - SELECT * FROM courses WHERE period = 'I semestre' AND year = 1;
-8 - SELECT * FROM courses WHERE website IS NULL;
-9 - SELECT * FROM teachers WHERE phone IS NOT NULL;
+1 - SELECT YEAR(enrolment_date) as data_iscrizione, COUNT(*) as numero_iscritti FROM students GROUP BY YEAR(enrolment_date) ORDER BY YEAR(enrolment_date)
+2 - SELECT office_address AS indirizzo_uffici, COUNT(*) as numero_professori FROM teachers GROUP BY office_address ORDER BY numero_professori
+3 - SELECT exam_id, COUNT (exam_id) AS Numero_esame, AVG (vote) AS media FROM exam_student GROUP BY exam_id
+4 - SELECT department_id AS numero_dipartimento, COUNT (*) AS corsi_dipartimento FROM degrees GROUP BY department_id
+5 -
+
+
 
 BONUS
-
-10 - SELECT * FROM students WHERE name LIKE 'E%';
-11 - SELECT COUNT (id) FROM teachers WHERE name LIKE 'E%';
-12 - SELECT COUNT (id) FROM teachers WHERE phone IS NULL;
