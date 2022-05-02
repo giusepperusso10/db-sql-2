@@ -1,0 +1,15 @@
+1 - SELECT * FROM teachers 
+2 - SELECT * FROM departments;
+3 - SELECT * FROM degrees WHERE level='magistrale';
+4 - SELECT * FROM students WHERE name='Marco';
+5 - SELECT * FROM courses WHERE cfu >= 12;
+6 - SELECT * FROM courses WHERE cfu > 12 OR cfu<5;
+7 - SELECT * FROM courses WHERE period = 'I semestre' AND year = 1;
+8 - SELECT * FROM courses WHERE website IS NULL;
+9 - SELECT * FROM teachers WHERE phone IS NOT NULL;
+
+BONUS
+
+10 - SELECT * FROM students WHERE name LIKE 'E%';
+11 - SELECT COUNT (id) FROM teachers WHERE name LIKE 'E%';
+12 - SELECT COUNT (id) FROM teachers WHERE phone IS NULL;
